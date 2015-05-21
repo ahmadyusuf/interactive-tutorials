@@ -89,3 +89,21 @@ Expected Output
 
 Solution
 --------
+	@family = ('Homer', 'Moe', 'Maggie');
+	%shoe_color = ('Lisa' => 'red', 'Homer' => 'brown', 'Maggie' => 'pink', 'Marge' => 'blue', 'Bart' => 'yellow');
+	%shoe_size = ('Moe' => 9, 'Lisa' => 7, 'Homer' => 12, 'Bart' => 8, 'Maggie' => 4);
+	
+    $color = (exists($shoe_color{$family[0]})) ? "$shoe_color{$family[0]}" : "black";
+	$size = (exists($shoe_size{$family[0]})) ? "$shoe_size{$family[0]}" : "99";
+    $large = ($shoe_size{$family[0]} > 10) ? " large " : " ";
+	print "	$family[0] wears$large$color shoes size $size\n";
+    
+    $color = (exists($shoe_color{$family[1]})) ? "$shoe_color{$family[1]}" : "black";
+	$size = (exists($shoe_size{$family[1]})) ? "$shoe_size{$family[1]}" : "99";
+    $large = ($size > 10) ? " large " : " ";
+	print "	$family[1] wears$large$color shoes size $size\n";
+    
+    $color = (exists($shoe_color{$family[2]})) ? "$shoe_color{$family[2]}" : "black";
+	$size = (exists($shoe_size{$family[2]})) ? "$shoe_size{$family[2]}" : "99";
+    $large = ($size > 10) ? " large " : " ";
+	print "	$family[2] wears$large$color shoes size $size\n";
